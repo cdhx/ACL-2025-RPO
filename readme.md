@@ -111,12 +111,12 @@ In this way, for constraints that originally contribute to noise (where one resp
 
 
 We also introduced an adaptive margin $\gamma g$ to alleviate the issue of uniformly handling preferences with different gaps. 
-$g$ is the number of differences between $\mathcal{S}_{y_i}$ and $\mathcal{S}_{y_j}$, ranging from $0$ to $|\mathcal{S}_x|$.
+$g$ is the number of differences between $\mathcal{S}\_{y\_i}$ and $\mathcal{S}\_{y\_j}$, ranging from $0$ to $|\mathcal{S}\_x|$.
 In this way, the optimization objective of RPO is formulated as: 
 
-$
-    \mathcal{L}_\text{RPO} = -\mathbb{E}_{(x_{S_i},  y_i, y_j, g)\sim \mathcal{D}}\left[\log \sigma  \left(  \beta \log \frac{\pi_{\theta}(y_i|x_{S_i})}{\pi_{ref}(y_i|x_{S_i})} - \right.\right. \left.\left.\vphantom{\frac{\pi_{\theta}}{\pi_{ref}}}\beta \log \frac{\pi_{\theta}(y_j|x_{S_i})}{\pi_{ref}(y_j|x_{S_i})} -  \gamma g \right) \right]
-$
+$$
+\mathcal{L}\_{\text{RPO}} = -\mathbb{E}\_{(x\_{S\_i}, y\_i, y\_j, g)\sim \mathcal{D}}\left[\log \sigma  \left(  \beta \log \frac{\pi\_{\theta}(y\_i|x\_{S\_i})}{\pi\_{ref}(y\_i|x\_{S\_i})} - \beta \log \frac{\pi\_{\theta}(y\_j|x\_{S\_i})}{\pi\_{ref}(y\_j|x\_{S\_i})} -  \gamma g \right) \right]
+$$
 
 
 ## Results
