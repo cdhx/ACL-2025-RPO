@@ -1,0 +1,13 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: /mnt/data/hx/Models/Meta-Llama-3-8B-Instruct
+adapter_name_or_path: saves/llama3-8b/lora/self_gen_dataset_sharegpt_format_10k
+template: llama3
+finetuning_type: lora
+
+### export
+export_dir: models/llama3_lora_sft_self_gen_dataset_sharegpt_format_10k
+export_size: 2
+export_device: auto
+export_legacy_format: false

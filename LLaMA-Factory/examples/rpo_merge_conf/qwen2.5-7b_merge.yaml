@@ -1,0 +1,13 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: /mnt/workspace/hx/Models/Qwen2.5-7B-Instruct
+adapter_name_or_path: saves/rpo/qwen2.5-7b-instruct-rpo
+template: qwen
+finetuning_type: lora
+
+### export
+export_dir: models/rpo/qwen2.5-7b-instruct-rpo
+export_size: 2
+export_device: auto
+export_legacy_format: false

@@ -1,0 +1,34 @@
+bf16: true
+cutoff_len: 2048
+dataset: rpo
+ddp_timeout: 180000000
+deepspeed: examples/deepspeed/ds_z3_offload_config.json
+do_train: true
+eval_steps: 5
+eval_strategy: steps
+finetuning_type: lora # we use lora by default 
+flash_attn: fa2
+gradient_accumulation_steps: 64
+learning_rate: 0.0005
+logging_dir: your exp directory
+logging_steps: 1
+lora_target: all
+lr_scheduler_type: cosine
+max_samples: 1000000000
+model_name_or_path: base model path
+num_train_epochs: 3.0
+output_dir: save model to where # lora weight, you need to merge it with the base model.
+overwrite_cache: false
+overwrite_output_dir: false
+per_device_eval_batch_size: 2
+per_device_train_batch_size: 2
+plot_loss: true
+pref_beta: 0.1
+pref_loss: sigmoid
+preprocessing_num_workers: 16
+report_to: tensorboard
+save_steps: 5
+stage: dpo
+template: qwen
+val_size: 0.1
+warmup_ratio: 0.1
