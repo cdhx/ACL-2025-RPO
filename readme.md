@@ -59,7 +59,7 @@ Reverse Preference Optimization for Complex Instruction Following  <br/>
 
 
 <p align="center">
-<img src="img/noisy_issue.png">
+<img src="img/noisy_issue.png" width="50%">
 </p>
 
 We notice that as the number of preferences that need to be followed increases, aligning multiple preferences simultaneously becomes a challenging problem. 
